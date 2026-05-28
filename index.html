@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBM Succession Planning Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <rect width="40" height="40" fill="#0F62FE"/>
+                    <text x="20" y="28" font-family="Arial" font-size="24" font-weight="bold" fill="white" text-anchor="middle">IBM</text>
+                </svg>
+                <h1>Succession Planning Dashboard</h1>
+            </div>
+            <div class="user-info">
+                <span>Aneisa Simon</span>
+                <div class="avatar">AS</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="nav-tabs">
+        <button class="nav-tab active" data-view="overview">Executive Overview</button>
+        <button class="nav-tab" data-view="roles">Role Details</button>
+        <button class="nav-tab" data-view="business">Business Groups</button>
+        <button class="nav-tab" data-view="highflyers">High Flyers</button>
+        <button class="nav-tab" data-view="gaps">Gap Analysis</button>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Executive Overview View -->
+        <div id="overview-view" class="view active">
+            <!-- Filters -->
+            <div class="filters">
+                <select class="filter-select">
+                    <option>All Business Groups</option>
+                    <option>Consulting</option>
+                    <option>Technology</option>
+                    <option>Sales</option>
+                    <option>Finance</option>
+                </select>
+                <select class="filter-select">
+                    <option>All Bands</option>
+                    <option>Band 6</option>
+                    <option>Band 7</option>
+                    <option>Band 8</option>
+                    <option>Band 9</option>
+                    <option>Band 10+</option>
+                </select>
+                <button class="btn-secondary">Apply Filters</button>
+            </div>
+
+            <!-- KPI Cards -->
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Overall Coverage</div>
+                    <div class="kpi-value">87%</div>
+                    <div class="kpi-change positive">+5% vs last quarter</div>
+                    <div class="kpi-progress">
+                        <div class="progress-bar" style="width: 87%"></div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Roles Covered</div>
+                    <div class="kpi-value">245<span class="kpi-total">/282</span></div>
+                    <div class="kpi-change positive">+12 roles</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">High Flyers</div>
+                    <div class="kpi-value">34</div>
+                    <div class="kpi-change positive">+3 identified</div>
+                </div>
+                <div class="kpi-card alert">
+                    <div class="kpi-label">At Risk Roles</div>
+                    <div class="kpi-value">12</div>
+                    <div class="kpi-change negative">Needs attention</div>
+                </div>
+            </div>
+
+            <!-- Charts Row -->
+            <div class="charts-row">
+                <div class="chart-card">
+                    <h3>Succession Coverage by Business Group</h3>
+                    <canvas id="coverageChart"></canvas>
+                </div>
+                <div class="chart-card">
+                    <h3>Pipeline Health Trend</h3>
+                    <canvas id="trendChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Critical Roles Table -->
+            <div class="table-card">
+                <h3>Critical Roles Requiring Attention</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Role Title</th>
+                            <th>Band</th>
+                            <th>Business Group</th>
+                            <th>Issue</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>VP Technology Strategy</td>
+                            <td>10</td>
+                            <td>Technology</td>
+                            <td><span class="badge critical">No candidates</span></td>
+                            <td><button class="btn-link">View Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td>Director Cloud Services</td>
+                            <td>9</td>
+                            <td>Technology</td>
+                            <td><span class="badge warning">Only 1 ready now</span></td>
+                            <td><button class="btn-link">View Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td>CFO Americas</td>
+                            <td>10</td>
+                            <td>Finance</td>
+                            <td><span class="badge warning">Inverted funnel</span></td>
+                            <td><button class="btn-link">View Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td>VP Sales Operations</td>
+                            <td>10</td>
+                            <td>Sales</td>
+                            <td><span class="badge warning">Retirement risk</span></td>
+                            <td><button class="btn-link">View Plan</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Role Details View -->
+        <div id="roles-view" class="view">
+            <div class="search-bar">
+                <input type="text" placeholder="Search for a role..." class="search-input">
+                <button class="btn-primary">Search</button>
+            </div>
+
+            <div class="role-detail-card">
+                <div class="role-header">
+                    <div>
+                        <h2>Director of Cloud Architecture</h2>
+                        <div class="role-meta">
+                            <span class="meta-item">Band 9</span>
+                            <span class="meta-item">Technology</span>
+                            <span class="meta-item">Cloud Practice</span>
+                            <span class="badge critical">Critical Role</span>
+                        </div>
+                    </div>
+                    <button class="btn-secondary">Export Plan</button>
+                </div>
+
+                <div class="incumbent-info">
+                    <h4>Current Incumbent</h4>
+                    <p><strong>John Smith</strong> • Tenure: 3.5 years • Retirement Eligible: 2028</p>
+                </div>
+
+                <div class="pipeline-section">
+                    <div class="pipeline-header">
+                        <h3>Succession Pipeline</h3>
+                        <span class="badge warning">⚠️ Inverted Funnel</span>
+                    </div>
+                    
+                    <div class="pipeline-grid">
+                        <div class="pipeline-column">
+                            <div class="pipeline-title">Ready Now (3)</div>
+                            <div class="candidate-card">
+                                <div class="candidate-name">Sarah Jones</div>
+                                <div class="candidate-role">Director Cloud Ops</div>
+                                <div class="candidate-score">Score: 4.5/5</div>
+                                <button class="btn-link">View Profile</button>
+                            </div>
+                            <div class="candidate-card">
+                                <div class="candidate-name">Tom Wilson</div>
+                                <div class="candidate-role">Sr Architect</div>
+                                <div class="candidate-score">Score: 4.2/5</div>
+                                <button class="btn-link">View Profile</button>
+                            </div>
+                            <div class="candidate-card">
+                                <div class="candidate-name">David Kim</div>
+                                <div class="candidate-role">Practice Lead</div>
+                                <div class="candidate-score">Score: 4.0/5</div>
+                                <button class="btn-link">View Profile</button>
+                            </div>
+                        </div>
+
+                        <div class="pipeline-column">
+                            <div class="pipeline-title">1-2 Years (4)</div>
+                            <div class="candidate-card">
+                                <div class="candidate-name">Mike Chen</div>
+                                <div class="candidate-role">Sr Manager</div>
+                                <div class="candidate-score">Score: 4.0/5</div>
+                                <button class="btn-link">View Profile</button>
+                            </div>
+                            <div class="candidate-card">
+                                <div class="candidate-name">Amy Liu</div>
+                                <div class="candidate-role">Tech Lead</div>
+                                <div class="candidate-score">Score: 3.8/5</div>
+                                <button class="btn-link">View Profile</button>
+                            </div>
+                            <div class="candidate-card">
+                                <div class="candidate-name">Rachel Green</div>
+                                <div class="candidate-role">Manager</div>
+                                <div class="candidate-score">Score: 3.7/5</div>
+                                <button class="btn-link">View Profile</button>
+                            </div>
+                            <div class="candidate-card">
+                                <div class="candidate-name">James Brown</div>
+                                <div class="candidate-role">Sr Engineer</div>
+                                <div class="candidate-score">Score: 3.6/5</div>
+                                <button class="btn-link">View Profile</button>
+                            </div>
+                        </div>
+
+                        <div class="pipeline-column">
+                            <div class="pipeline-title">3+ Years (2)</div>
+                            <div class="candidate-card">
+                                <div class="candidate-name">Lisa Park</div>
+                                <div class="candidate-role">Manager</div>
+                                <div class="candidate-score">Score: 3.5/5</div>
+                                <button class="btn-link">View Profile</button>
+                            </div>
+                            <div class="candidate-card">
+                                <div class="candidate-name">Alex Martinez</div>
+                                <div class="candidate-role">Team Lead</div>
+                                <div class="candidate-score">Score: 3.4/5</div>
+                                <button class="btn-link">View Profile</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="development-needs">
+                    <h4>Common Development Needs</h4>
+                    <ul>
+                        <li>Executive leadership experience (5 candidates)</li>
+                        <li>Multi-region management (4 candidates)</li>
+                        <li>P&L responsibility (3 candidates)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Business Groups View -->
+        <div id="business-view" class="view">
+            <div class="view-header">
+                <h2>Technology Business Group - Succession Overview</h2>
+                <select class="filter-select">
+                    <option>Technology</option>
+                    <option>Consulting</option>
+                    <option>Sales</option>
+                    <option>Finance</option>
+                </select>
+            </div>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">Coverage</div>
+                    <div class="kpi-value">78%</div>
+                    <div class="kpi-progress">
+                        <div class="progress-bar warning" style="width: 78%"></div>
+                    </div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Avg Pipeline Depth</div>
+                    <div class="kpi-value">8.2</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Bench Strength</div>
+                    <div class="kpi-value">Good</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Critical Gaps</div>
+                    <div class="kpi-value">5</div>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <h3>Succession Health by Practice</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Practice</th>
+                            <th>Roles</th>
+                            <th>Coverage</th>
+                            <th>Ready Now</th>
+                            <th>1-2 Years</th>
+                            <th>3+ Years</th>
+                            <th>Health</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cloud</td>
+                            <td>45</td>
+                            <td>82%</td>
+                            <td>38</td>
+                            <td>52</td>
+                            <td>67</td>
+                            <td><span class="badge success">✓ Good</span></td>
+                        </tr>
+                        <tr>
+                            <td>AI/ML</td>
+                            <td>32</td>
+                            <td>75%</td>
+                            <td>25</td>
+                            <td>38</td>
+                            <td>45</td>
+                            <td><span class="badge success">✓ Good</span></td>
+                        </tr>
+                        <tr>
+                            <td>Security</td>
+                            <td>28</td>
+                            <td>71%</td>
+                            <td>22</td>
+                            <td>31</td>
+                            <td>38</td>
+                            <td><span class="badge warning">⚠️ Needs Attention</span></td>
+                        </tr>
+                        <tr>
+                            <td>Data</td>
+                            <td>18</td>
+                            <td>89%</td>
+                            <td>15</td>
+                            <td>22</td>
+                            <td>28</td>
+                            <td><span class="badge success">✓ Good</span></td>
+                        </tr>
+                        <tr>
+                            <td>Infrastructure</td>
+                            <td>35</td>
+                            <td>69%</td>
+                            <td>28</td>
+                            <td>35</td>
+                            <td>42</td>
+                            <td><span class="badge warning">⚠️ Needs Attention</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="chart-card">
+                <h3>Pipeline Distribution</h3>
+                <canvas id="pipelineChart"></canvas>
+            </div>
+        </div>
+
+        <!-- High Flyers View -->
+        <div id="highflyers-view" class="view">
+            <div class="view-header">
+                <h2>High Flyers & Talent Pool</h2>
+                <div class="filters">
+                    <select class="filter-select">
+                        <option>Min 2+ roles</option>
+                        <option>Min 3+ roles</option>
+                        <option>Min 4+ roles</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label">High Flyers (2+ roles)</div>
+                    <div class="kpi-value">34</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Ready Now Pool</div>
+                    <div class="kpi-value">89</div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label">Avg Roles per Person</div>
+                    <div class="kpi-value">3.2</div>
+                </div>
+                <div class="kpi-card alert">
+                    <div class="kpi-label">Retention Risk</div>
+                    <div class="kpi-value">8</div>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <h3>High Flyers List</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Current Role</th>
+                            <th>Band</th>
+                            <th># Roles</th>
+                            <th>Readiness</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Sarah Jones</strong></td>
+                            <td>Dir Cloud Ops</td>
+                            <td>8</td>
+                            <td><span class="badge success">5</span></td>
+                            <td><span class="badge success">Ready Now</span></td>
+                            <td><button class="btn-link">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Mike Chen</strong></td>
+                            <td>Sr Architect</td>
+                            <td>7</td>
+                            <td><span class="badge success">4</span></td>
+                            <td><span class="badge success">Ready Now</span></td>
+                            <td><button class="btn-link">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Lisa Park</strong></td>
+                            <td>Practice Lead</td>
+                            <td>8</td>
+                            <td><span class="badge success">4</span></td>
+                            <td><span class="badge warning">1-2 Years</span></td>
+                            <td><button class="btn-link">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Tom Wilson</strong></td>
+                            <td>Dir AI/ML</td>
+                            <td>8</td>
+                            <td><span class="badge success">3</span></td>
+                            <td><span class="badge success">Ready Now</span></td>
+                            <td><button class="btn-link">View Details</button></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Amy Liu</strong></td>
+                            <td>Tech Lead</td>
+                            <td>7</td>
+                            <td><span class="badge success">3</span></td>
+                            <td><span class="badge warning">1-2 Years</span></td>
+                            <td><button class="btn-link">View Details</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="highlight-card">
+                <h3>Spotlight: Sarah Jones</h3>
+                <div class="spotlight-content">
+                    <div class="spotlight-info">
+                        <p><strong>Current:</strong> Director Cloud Operations (Band 8)</p>
+                        <p><strong>Performance:</strong> Exceptional</p>
+                        <p><strong>Flight Risk:</strong> Low</p>
+                    </div>
+                    <div class="spotlight-roles">
+                        <h4>Identified for 5 Roles:</h4>
+                        <ul>
+                            <li>VP Cloud Strategy (Band 10) - Ready Now</li>
+                            <li>Director Cloud Architecture (Band 9) - Ready Now</li>
+                            <li>VP Technology Operations (Band 10) - 1-2 Years</li>
+                            <li>Director Infrastructure (Band 9) - Ready Now</li>
+                            <li>VP Digital Transformation (Band 10) - 1-2 Years</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gap Analysis View -->
+        <div id="gaps-view" class="view">
+            <div class="view-header">
+                <h2>Gap Analysis & Risk Assessment</h2>
+            </div>
+
+            <div class="kpi-grid">
+                <div class="kpi-card alert">
+                    <div class="kpi-label">Critical Gaps</div>
+                    <div class="kpi-value">12</div>
+                    <div class="kpi-change">No candidates</div>
+                </div>
+                <div class="kpi-card alert">
+                    <div class="kpi-label">High Risk</div>
+                    <div class="kpi-value">23</div>
+                    <div class="kpi-change">Single candidate</div>
+                </div>
+                <div class="kpi-card alert">
+                    <div class="kpi-label">Retirement Risk</div>
+                    <div class="kpi-value">8</div>
+                    <div class="kpi-change">Within 2 years</div>
+                </div>
+                <div class="kpi-card alert">
+                    <div class="kpi-label">Flight Risk</div>
+                    <div class="kpi-value">15</div>
+                    <div class="kpi-change">High performers</div>
+                </div>
+            </div>
+
+            <div class="table-card">
+                <h3>Critical Gaps (No Succession Candidates)</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Role</th>
+                            <th>Band</th>
+                            <th>Business Group</th>
+                            <th>Incumbent</th>
+                            <th>Priority</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>VP Technology Strategy</td>
+                            <td>10</td>
+                            <td>Technology</td>
+                            <td>J. Smith</td>
+                            <td><span class="badge critical">Critical</span></td>
+                            <td><button class="btn-primary">Create Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td>CFO Americas</td>
+                            <td>10</td>
+                            <td>Finance</td>
+                            <td>M. Jones</td>
+                            <td><span class="badge critical">Critical</span></td>
+                            <td><button class="btn-primary">Create Plan</button></td>
+                        </tr>
+                        <tr>
+                            <td>Chief Security Officer</td>
+                            <td>10</td>
+                            <td>Security</td>
+                            <td>S. Lee</td>
+                            <td><span class="badge critical">Critical</span></td>
+                            <td><button class="btn-primary">Create Plan</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-card">
+                <h3>Inverted Funnel (More Ready Now than 3+ Years)</h3>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Role</th>
+                            <th>Ready Now</th>
+                            <th>1-2 Years</th>
+                            <th>3+ Years</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CFO Americas</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td><span class="badge warning">⚠️ Inverted</span></td>
+                            <td><button class="btn-link">Address</button></td>
+                        </tr>
+                        <tr>
+                            <td>VP Marketing</td>
+                            <td>4</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td><span class="badge warning">⚠️ Inverted</span></td>
+                            <td><button class="btn-link">Address</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="chart-card">
+                <h3>Risk Distribution by Business Group</h3>
+                <canvas id="riskChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
