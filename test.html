@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Dashboard Functions</title>
+</head>
+<body>
+    <h1>Testing Dashboard Functions</h1>
+    <button onclick="testFunctions()">Test Functions</button>
+    <div id="output"></div>
+    
+    <script src="script.js"></script>
+    <script>
+        function testFunctions() {
+            const output = document.getElementById('output');
+            output.innerHTML = '<h2>Test Results:</h2>';
+            
+            // Test 1: Check if populateAllViews exists
+            output.innerHTML += '<p>populateAllViews exists: ' + (typeof populateAllViews === 'function') + '</p>';
+            
+            // Test 2: Check if populateRolesView exists
+            output.innerHTML += '<p>populateRolesView exists: ' + (typeof populateRolesView === 'function') + '</p>';
+            
+            // Test 3: Check if loadDummyData exists
+            output.innerHTML += '<p>loadDummyData exists: ' + (typeof loadDummyData === 'function') + '</p>';
+            
+            // Test 4: Try loading dummy data
+            output.innerHTML += '<p>Attempting to load dummy data...</p>';
+            loadDummyData();
+            
+            setTimeout(() => {
+                output.innerHTML += '<p>dashboardData exists: ' + (dashboardData !== null) + '</p>';
+                if (dashboardData) {
+                    output.innerHTML += '<p>rolesList length: ' + (dashboardData.rolesList ? dashboardData.rolesList.length : 'undefined') + '</p>';
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>

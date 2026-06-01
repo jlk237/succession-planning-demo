@@ -1,0 +1,54 @@
+candidate_id,candidate_name,target_role_id,current_role,current_role_id,current_band,readiness_timeline,readiness_score,nomination_date,business_group
+E00123,Sarah Jones,R0001,Director Cloud Architecture,R0002,9,Ready Now,4.5,2025-01-15,Technology
+E00124,Mike Chen,R0001,Director AI/ML,R0005,9,Ready Now,4.2,2025-01-15,Technology
+E00125,Lisa Park,R0001,Director Data Analytics,R0008,9,1-2 Years,4.0,2025-02-01,Technology
+E00126,David Kim,R0002,Senior Manager Cloud,R0009,8,Ready Now,4.3,2025-01-20,Technology
+E00127,Tom Wilson,R0002,Manager Cloud Infrastructure,R0010,7,Ready Now,4.1,2025-01-20,Technology
+E00128,Jennifer Martinez,R0002,Senior Manager DevOps,R0011,8,Ready Now,4.4,2025-02-10,Technology
+E00129,Sarah Jones,R0002,Director Cloud Architecture,R0002,9,1-2 Years,4.2,2025-02-15,Technology
+E00130,Mike Chen,R0002,Director AI/ML,R0005,9,1-2 Years,4.0,2025-02-15,Technology
+E00131,Robert Brown,R0002,Manager Platform,R0012,7,1-2 Years,3.8,2025-03-01,Technology
+E00132,Emily White,R0002,Senior Manager Architecture,R0013,8,1-2 Years,3.9,2025-03-01,Technology
+E00133,James Taylor,R0002,Manager Security,R0014,7,3+ Years,3.6,2025-03-15,Technology
+E00134,Maria Garcia,R0002,Manager Data,R0015,7,3+ Years,3.5,2025-03-15,Technology
+E00135,David Kim,R0003,Senior Manager Finance,R0016,8,Ready Now,4.4,2025-01-10,Finance
+E00136,Lisa Park,R0003,Director Data Analytics,R0008,9,Ready Now,4.2,2025-01-10,Finance
+E00137,Tom Wilson,R0003,Manager Cloud Infrastructure,R0010,7,Ready Now,4.0,2025-01-25,Finance
+E00138,Michael Anderson,R0003,Senior Manager FP&A,R0017,8,1-2 Years,3.9,2025-02-05,Finance
+E00139,Patricia Lee,R0003,Manager Accounting,R0018,7,1-2 Years,3.7,2025-02-20,Finance
+E00140,John Davis,R0003,Senior Analyst,R0019,6,3+ Years,3.5,2025-03-10,Finance
+E00141,Sarah Jones,R0004,Director Cloud Architecture,R0002,9,Ready Now,4.3,2025-01-18,Sales
+E00142,Mike Chen,R0004,Director AI/ML,R0005,9,Ready Now,4.1,2025-01-18,Sales
+E00143,Robert Brown,R0004,Manager Platform,R0012,7,1-2 Years,3.9,2025-02-12,Sales
+E00144,Emily White,R0004,Senior Manager Architecture,R0013,8,1-2 Years,3.8,2025-02-12,Sales
+E00145,James Taylor,R0004,Manager Security,R0014,7,1-2 Years,3.7,2025-02-28,Sales
+E00146,Maria Garcia,R0004,Manager Data,R0015,7,3+ Years,3.6,2025-03-05,Sales
+E00147,Jennifer Martinez,R0004,Senior Manager DevOps,R0011,8,3+ Years,3.5,2025-03-20,Sales
+E00148,Patricia Lee,R0004,Manager Accounting,R0018,7,3+ Years,3.4,2025-03-20,Sales
+E00149,Sarah Jones,R0005,Director Cloud Architecture,R0002,9,Ready Now,4.4,2025-01-22,Technology
+E00150,Mike Chen,R0005,Director AI/ML,R0005,9,Ready Now,4.3,2025-01-22,Technology
+E00151,David Kim,R0005,Senior Manager Cloud,R0009,8,1-2 Years,4.1,2025-02-08,Technology
+E00152,Tom Wilson,R0005,Manager Cloud Infrastructure,R0010,7,1-2 Years,3.9,2025-02-08,Technology
+E00153,Jennifer Martinez,R0005,Senior Manager DevOps,R0011,8,1-2 Years,4.0,2025-02-25,Technology
+E00154,Robert Brown,R0005,Manager Platform,R0012,7,1-2 Years,3.8,2025-02-25,Technology
+E00155,Emily White,R0005,Senior Manager Architecture,R0013,8,3+ Years,3.7,2025-03-12,Technology
+E00156,James Taylor,R0005,Manager Security,R0014,7,3+ Years,3.6,2025-03-12,Technology
+E00157,Maria Garcia,R0005,Manager Data,R0015,7,3+ Years,3.5,2025-03-18,Technology
+E00158,Lisa Park,R0005,Director Data Analytics,R0008,9,3+ Years,3.9,2025-03-18,Technology
+E00159,Michael Anderson,R0005,Senior Manager FP&A,R0017,8,3+ Years,3.4,2025-03-25,Technology
+E00160,Tom Wilson,R0006,Manager Cloud Infrastructure,R0010,7,Ready Now,4.2,2025-01-28,Consulting
+E00161,David Kim,R0006,Senior Manager Cloud,R0009,8,1-2 Years,4.0,2025-02-14,Consulting
+E00162,Jennifer Martinez,R0006,Senior Manager DevOps,R0011,8,1-2 Years,3.9,2025-03-02,Consulting
+E00163,Robert Brown,R0006,Manager Platform,R0012,7,3+ Years,3.7,2025-03-08,Consulting
+E00164,Emily White,R0006,Senior Manager Architecture,R0013,8,3+ Years,3.6,2025-03-22,Consulting
+E00165,James Taylor,R0006,Manager Security,R0014,7,3+ Years,3.5,2025-03-22,Consulting
+E00166,Lisa Park,R0008,Director Data Analytics,R0008,9,Ready Now,4.5,2025-01-12,Technology
+E00167,Sarah Jones,R0008,Director Cloud Architecture,R0002,9,Ready Now,4.3,2025-01-12,Technology
+E00168,Mike Chen,R0008,Director AI/ML,R0005,9,Ready Now,4.2,2025-01-30,Technology
+E00169,David Kim,R0009,Senior Manager Cloud,R0009,8,Ready Now,4.4,2025-01-16,Technology
+E00170,Tom Wilson,R0009,Manager Cloud Infrastructure,R0010,7,Ready Now,4.2,2025-01-16,Technology
+E00171,Jennifer Martinez,R0009,Senior Manager DevOps,R0011,8,1-2 Years,4.0,2025-02-18,Technology
+E00172,Robert Brown,R0009,Manager Platform,R0012,7,1-2 Years,3.9,2025-02-18,Technology
+E00173,Emily White,R0010,Senior Manager Architecture,R0013,8,Ready Now,4.3,2025-01-24,Technology
+E00174,James Taylor,R0010,Manager Security,R0014,7,Ready Now,4.1,2025-01-24,Technology
+E00175,Maria Garcia,R0010,Manager Data,R0015,7,1-2 Years,3.8,2025-02-22,Technology

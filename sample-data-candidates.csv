@@ -1,0 +1,42 @@
+candidate_id,candidate_name,target_role_id,current_role,current_band,readiness_timeline,readiness_score,nomination_date,business_group
+E00123,Sarah Jones,R0002,Director Cloud Operations,8,Ready Now,4.5,2025-01-15,Technology
+E00124,Mike Chen,R0002,Senior Architect,7,1-2 Years,4.0,2025-01-15,Technology
+E00125,Lisa Park,R0002,Practice Lead,8,3+ Years,3.5,2025-02-01,Technology
+E00126,Tom Wilson,R0002,Director Infrastructure,8,Ready Now,4.2,2025-01-20,Technology
+E00127,Amy Liu,R0002,Tech Lead,7,1-2 Years,3.8,2025-02-10,Technology
+E00128,David Kim,R0002,Senior Manager,7,Ready Now,4.0,2025-01-25,Technology
+E00129,Rachel Green,R0002,Manager Cloud Services,7,1-2 Years,3.7,2025-02-15,Technology
+E00130,James Brown,R0002,Senior Engineer,7,1-2 Years,3.6,2025-03-01,Technology
+E00131,Alex Martinez,R0002,Team Lead,7,3+ Years,3.4,2025-03-10,Technology
+E00132,Sarah Jones,R0001,Director Cloud Operations,8,Ready Now,4.5,2025-01-15,Technology
+E00133,Mike Chen,R0001,Senior Architect,7,Ready Now,4.0,2025-01-15,Technology
+E00134,Lisa Park,R0001,Practice Lead,8,1-2 Years,3.5,2025-02-01,Technology
+E00135,Tom Wilson,R0001,Director Infrastructure,8,1-2 Years,4.2,2025-01-20,Technology
+E00136,Amy Liu,R0001,Tech Lead,7,3+ Years,3.8,2025-02-10,Technology
+E00137,Jennifer Martinez,R0003,VP Finance Operations,10,Ready Now,4.3,2025-01-10,Finance
+E00138,Robert Williams,R0003,Director Financial Planning,9,Ready Now,4.1,2025-01-12,Finance
+E00139,Amanda Jackson,R0003,CFO EMEA,10,Ready Now,4.0,2025-01-15,Finance
+E00140,Andrew Walker,R0003,VP Finance Operations,10,1-2 Years,3.9,2025-02-01,Finance
+E00141,Patricia Brown,R0003,Director HR,9,1-2 Years,3.7,2025-02-05,HR
+E00142,Kevin Harris,R0003,VP Business Development,10,3+ Years,3.5,2025-03-01,Sales
+E00143,Sarah Jones,R0005,Director Cloud Operations,8,Ready Now,4.5,2025-01-15,Technology
+E00144,David Kim,R0005,Senior Manager,7,Ready Now,4.0,2025-01-25,Technology
+E00145,Maria Garcia,R0005,Director Data Analytics,9,1-2 Years,4.2,2025-02-01,Technology
+E00146,Lisa Park,R0005,Practice Lead,8,1-2 Years,3.5,2025-02-01,Technology
+E00147,Mike Chen,R0005,Senior Architect,7,3+ Years,4.0,2025-01-15,Technology
+E00148,Tom Wilson,R0010,Director Infrastructure,8,Ready Now,4.2,2025-01-20,Technology
+E00149,Christopher Moore,R0010,Director Infrastructure,9,1-2 Years,4.0,2025-02-01,Technology
+E00150,Michelle Lee,R0010,Director Security Operations,9,1-2 Years,3.8,2025-02-05,Technology
+E00151,Daniel White,R0010,VP Product Management,10,3+ Years,3.6,2025-03-01,Technology
+E00152,Elizabeth Davis,R0011,VP Consulting Services,10,Ready Now,4.4,2025-01-10,Consulting
+E00153,Jessica Clark,R0011,Director Digital Transformation,9,Ready Now,4.1,2025-01-15,Consulting
+E00154,Nicole Robinson,R0011,Director Customer Success,9,1-2 Years,3.9,2025-02-01,Sales
+E00155,Brian Lewis,R0011,VP Operations,10,1-2 Years,3.7,2025-02-10,Operations
+E00156,James Taylor,R0015,Chief Security Officer,10,Ready Now,4.3,2025-01-10,Technology
+E00157,Michelle Lee,R0015,Director Security Operations,9,Ready Now,4.0,2025-02-05,Technology
+E00158,Christopher Moore,R0015,Director Infrastructure,9,1-2 Years,3.8,2025-02-01,Technology
+E00159,David Kim,R0015,Senior Manager,7,3+ Years,3.5,2025-01-25,Technology
+E00160,Sarah Jones,R0014,Director Cloud Operations,8,1-2 Years,4.5,2025-01-15,Technology
+E00161,Daniel White,R0014,VP Product Management,10,Ready Now,4.2,2025-03-01,Technology
+E00162,Mike Chen,R0014,Senior Architect,7,3+ Years,4.0,2025-01-15,Technology
+E00163,Lisa Park,R0014,Practice Lead,8,3+ Years,3.5,2025-02-01,Technology

@@ -1,0 +1,21 @@
+role_id,role_title,band,business_group,practice,specialty,location,is_critical,incumbent_name,incumbent_tenure,retirement_date
+R0001,VP Technology Strategy,10,Technology,Strategy,Enterprise Architecture,New York,Yes,Michael Chen,4.2,2028-06-30
+R0002,Director Cloud Architecture,9,Technology,Cloud,Architecture,San Francisco,Yes,Sarah Johnson,3.5,
+R0003,CFO Americas,10,Finance,Finance,Financial Planning,New York,Yes,Robert Williams,6.1,2027-12-31
+R0004,VP Sales Operations,10,Sales,Operations,Sales Strategy,Chicago,Yes,Jennifer Martinez,5.3,2029-03-15
+R0005,Director AI/ML,9,Technology,AI/ML,Machine Learning,Boston,Yes,David Kim,2.8,
+R0006,VP Marketing,10,Sales,Marketing,Brand Strategy,New York,Yes,Lisa Anderson,4.7,
+R0007,Chief Security Officer,10,Technology,Security,Cybersecurity,Washington DC,Yes,James Taylor,7.2,2026-11-30
+R0008,Director Data Analytics,9,Technology,Data,Analytics,Austin,Yes,Maria Garcia,3.1,
+R0009,VP Human Resources,10,HR,HR Operations,Talent Management,New York,Yes,Patricia Brown,5.9,2028-09-15
+R0010,Director Cloud Services,9,Technology,Cloud,Cloud Operations,Seattle,Yes,Thomas Wilson,4.3,
+R0011,VP Consulting Services,10,Consulting,Strategy,Management Consulting,Boston,Yes,Elizabeth Davis,6.5,
+R0012,Director Infrastructure,9,Technology,Infrastructure,IT Operations,Dallas,Yes,Christopher Moore,3.7,
+R0013,CFO EMEA,10,Finance,Finance,Regional Finance,London,Yes,Amanda Jackson,5.2,2027-08-20
+R0014,VP Product Management,10,Technology,Product,Product Strategy,San Francisco,Yes,Daniel White,4.1,
+R0015,Director Security Operations,9,Technology,Security,Security Operations,Washington DC,Yes,Michelle Lee,2.9,
+R0016,VP Business Development,10,Sales,Business Development,Partnerships,New York,Yes,Kevin Harris,5.6,
+R0017,Director Digital Transformation,9,Consulting,Digital,Digital Strategy,Chicago,Yes,Jessica Clark,3.4,
+R0018,VP Operations,10,Operations,Operations,Operational Excellence,Atlanta,Yes,Brian Lewis,6.8,2027-03-10
+R0019,Director Customer Success,9,Sales,Customer Success,Client Relations,Boston,Yes,Nicole Robinson,3.2,
+R0020,VP Finance Operations,10,Finance,Operations,Financial Operations,New York,Yes,Andrew Walker,4.9,
